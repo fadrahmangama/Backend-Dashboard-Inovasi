@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\UserLogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,9 @@ Route::get('article/{id}',[ArticleController::class,'show']);
 Route::post('article',[ArticleController::class,'postCreateArticle']);
 Route::put('article/{id}',[ArticleController::class,'putUpdateArticle']);
 Route::delete('article/{id}',[ArticleController::class,'deleteArticle']);
+
+Route::get('userlog',[UserLogController::class,'getAllUserLog']);
+Route::get('userlog/{id}',[UserLogController::class,'getUserLogById']);
+Route::post('userlog',[UserLogController::class,'createUserLog']);
+Route::put('userlog/{id}',[UserLogController::class,'updateUserLog']);
+Route::delete('userlog/{id}',[UserLogController::class,'deleteUserLog']);

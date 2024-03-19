@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use \App\Models\UserLog;
+use \App\Models\Article;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +20,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
+        
+        UserLog::factory(10)->create();
+        Article::factory(10)->create();
         
     }
 }
